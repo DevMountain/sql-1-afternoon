@@ -38,7 +38,7 @@ WHERE Milliseconds > 299000
 ```
 
 Now that we have some basic query examples.  Let's try doing some more complicated ones.
-Use [www.sqlteaching.net](http://www.sqlteaching.com/) or [sqlbolt.com](http://sqlbolt.com/) as resources for the missing keywords you'll need.
+Use [www.sqlteaching.com](http://www.sqlteaching.com/) or [sqlbolt.com](http://sqlbolt.com/) as resources for the missing keywords you'll need.
 
 1. Find the average length of all tracks in Milliseconds
 2. Find the number of invoices by State in the USA
