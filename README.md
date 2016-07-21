@@ -6,52 +6,20 @@ Here is a website that will let us write queries to interact with some data.  [h
 
 On the left are the Tables with their fields.  The right is where we will be writing our queries.  The bottom is where we will see our results.  
 
-Let's start with grabbing some data from the Artist table.
+Any new tables or records that we add into the database will be removed after you refresh the page.  So if you're wondering where you data went, that may be why.
 
-```
-SELECT *
-FROM Artist
-```
-
-This will select all the records and fields from the Artist table.  
-
-If we don't want to pull all the fields, we can be more specific in our SELECT statement
-
-```
-SELECT FirstName, LastName, Country
-FROM Employee
-```
-
-If we want to put criteria on which records we pull, we use the WHERE statement.
-
-```
-SELECT Name, Composer, Milliseconds
-FROM Track
-WHERE Milliseconds > 299000
-```
-Now instead of displaying all the tracks that are over 299 seconds, we could us the count function to return only how many there are.  
-
-```
-SELECT count(*)
-FROM Track
-WHERE Milliseconds > 299000
-```
-
-Now that we have some basic query examples.  Let's try doing some more complicated ones.
 Use [www.sqlteaching.com](http://www.sqlteaching.com/) or [sqlbolt.com](http://sqlbolt.com/) as resources for the missing keywords you'll need.
 
-1. Find the average length of all tracks in Milliseconds
-2. Find the number of invoices by State in the USA
-3. Make a list of all the First Names of Customers that contain an 'a'
-4. Make a list of the 10 longest tracks
-5. Make a list of the 20 shortest tracks
-6. Find all the customers that live in California or Washington
-7. Find all the customers that live in California, Washington, Utah, Florida, or Arizona (Use IN keyword)
-8. Insert an artist to the database
-9. Insert yourself as a customer to the database
-10. You can either continue exploring this dataset or look into setting up postgres on your local machine.
-
-
+1. Create a table called Person that records a person's Name, Age, Height, City, FavoriteColor, and Id
+2. Add 3 different people into the Person database
+3. List the people in the Person table by Height from tallest to shortest
+4. Create a table called Orders that records the productName, productPrice, Quantity, and personId  
+5. Add 5 Orders to Order table
+6. Select all the records from the Order table
+7. Calculate the total number of products Ordered
+8. Calculate the total Order Price
+9. Calculate the total Order Price By personId (If you only made orders for 1 person, go add more for the other people)
+10 ...
 
 ## Copyright
 
