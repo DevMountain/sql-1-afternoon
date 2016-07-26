@@ -11,9 +11,11 @@ Any new tables or records that we add into the database will be removed after yo
 Use [www.sqlteaching.com](http://www.sqlteaching.com/) or [sqlbolt.com](http://sqlbolt.com/) as resources for the missing keywords you'll need.
 
 ## PERSON
-1. Create a table called Person that records a person's Name, Age, Height, City, FavoriteColor, and Id.  Id should be an auto-incrementing id/primary key.
+1. Create a table called Person that records a person's Name, Age, Height, City, FavoriteColor, and Id.  Id should be an auto-incrementing id/primary key.  
 2. Add 5 different people into the Person database.  Remember to not include the Id because it should auto-increment.
 3. List the people in the Person table by Height from tallest to shortest (descending)
+
+(For this database to create an auto incrementing field set it's type to INTEGER PRIMARY KEY AUTOINCREMENT)
 
   * List the people in the Person table by Height from shortest to tallest (ascending)
   * List all the people in the Person table by oldest first
