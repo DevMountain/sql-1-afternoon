@@ -43,6 +43,8 @@ Use [www.sqlteaching.com](http://www.sqlteaching.com/) or [sqlbolt.com](http://s
 
  * Select the top 10 artists in reverse alphabetical order
  * Select the top 5 artists in alphabetical order
+ * Select all artists that start with the word Black
+ * Select all artists that contain the word Black
 
 ## Employee
 8. Add 2 new Employees to the Employee table
