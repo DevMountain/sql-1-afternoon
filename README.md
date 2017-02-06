@@ -26,7 +26,7 @@ Use [www.sqlteaching.com](http://www.sqlteaching.com/) or [sqlbolt.com](http://s
   * List all Person where their favorite color is not red
   * List all Person where their favorite color is not red or blue
   * List all Person where their favorite color is orange or green
-  * List all Person where their favorite color is orange or green blue (use IN)
+  * List all Person where their favorite color is orange, green or blue (use IN)
   * List all Person where their favorite color is yellow or purple
 
 ## ORDER 
