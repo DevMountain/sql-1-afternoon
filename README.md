@@ -19,7 +19,7 @@ Use [www.sqlteaching.com](http://www.sqlteaching.com/) or [sqlbolt.com](http://s
     * Remember to not include the ID because it should auto-increment.
 3. List all the people in the Person table by Height from tallest to shortest.
 4. List all the people in the Person table by Height from shortest to tallest.
-5. List all the people in the Person table by Age from Oldest to Youngest.
+5. List all the people in the Person table by Age from oldest to youngest.
 6. List all the people in the Person table older than age 20.
 7. List all the people in the Person table that are exactly 18.
 8. List all the people in the Person table that are less than 20 and older than 30.
