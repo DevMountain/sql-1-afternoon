@@ -57,7 +57,7 @@ INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First La
 <summary> <code> #3 </code> </summary>
 
 ```sql
-SELECT * FROM Person ORDER BY Height DESC
+SELECT * FROM Person ORDER BY Height DESC;
 ```
 
 </details>
@@ -67,7 +67,7 @@ SELECT * FROM Person ORDER BY Height DESC
 <summary> <code> #4 </code> </summary>
 
 ```sql
-SELECT * FROM Person ORDER BY Height ASC
+SELECT * FROM Person ORDER BY Height ASC;
 ```
 
 </details>
@@ -77,10 +77,22 @@ SELECT * FROM Person ORDER BY Height ASC
 <summary> <code> #5 </code> </summary>
 
 ```sql
-SELECT * FROM Person ORDER BY Age DESC
+SELECT * FROM Person ORDER BY Age DESC;
 ```
 
 </details>
+
+<details>
+
+<summary> <code> #6 </code> </summary>
+
+```sql
+SELECT * FROM Person WHERE Age > 20;
+```
+
+</details>
+
+
 
 <details>
 
