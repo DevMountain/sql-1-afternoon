@@ -182,7 +182,7 @@ SELECT * FROM Person WHERE FavoriteColor IN ( "yellow", "purple" )
 
 ### Instructions
 
-1. Create a table called Orders that records: PersonID, productName, productPrice, Quantity.
+1. Create a table called Orders that records: PersonID, ProductName, ProductPrice, Quantity.
     * PersonID should be different for different people.
     * Make orders for at least two different people.
 2. Add 5 Orders to Order table.
@@ -201,11 +201,53 @@ SELECT * FROM Person WHERE FavoriteColor IN ( "yellow", "purple" )
 
 <summary> <code> #1 </code> </summary>
 
-```
-
+```sql
+CREATE TABLE Orders ( PersonID integer, ProductName string, ProductPrice float, Quantity integer );
 ```
 
 </details>
+
+<details>
+
+<summary> <code> #2 </code> </summary>
+
+```sql
+INSERT INTO Orders ( PersonID, ProductName, ProductPrice, Quantity ) VALUES ( 0, "Product", 12.50, 2 );
+```
+
+</details>
+
+
+
+
+
+
+
+
+<details>
+
+<summary> <code> Placeholder </code> </summary>
+
+```sql
+INSERT INTO Orders ( PersonID, ProductName, ProductPrice, Quantity )
+VALUES ( 0, "Burger", 12.50, 2 );
+
+INSERT INTO Orders ( PersonID, ProductName, ProductPrice, Quantity )
+VALUES ( 0, "Product", 12.50, 4 );
+
+INSERT INTO Orders ( PersonID, ProductName, ProductPrice, Quantity )
+VALUES ( 1, "Product", 13.32, 3 );
+
+INSERT INTO Orders ( PersonID, ProductName, ProductPrice, Quantity )
+VALUES ( 1, "Product", 19.75, 1 );
+
+INSERT INTO Orders ( PersonID, ProductName, ProductPrice, Quantity )
+VALUES ( 0, "Product", 20.21, 5 );
+```
+
+</details>
+
+
 
 </details>
 
