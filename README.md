@@ -14,9 +14,9 @@ Use [www.sqlteaching.com](http://www.sqlteaching.com/) or [sqlbolt.com](http://s
 
 ### Instructions
 1. Create a table called Person that records a person's Name, Age, Height, City, FavoriteColor, and Id. 
-  * Id should be an auto-incrementing id/primary key - Use type: INTEGER PRIMARY KEY AUTOINCREMENT
+    * Id should be an auto-incrementing id/primary key - Use type: INTEGER PRIMARY KEY AUTOINCREMENT
 2. Add 5 different people into the Person database. 
-  * Remember to not include the Id because it should auto-increment.
+    * Remember to not include the Id because it should auto-increment.
 3. List the people in the Person table by Height from tallest to shortest (descending)
 4. List the people in the Person table by Height from shortest to tallest (ascending)
 5. List all the people in the Person table by oldest first
