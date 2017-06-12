@@ -384,6 +384,16 @@ SELECT * FROM Employee WHERE ReportsTo = 2;
 
 </details>
 
+<details>
+
+<summary> <code> #5 </code> </summary>
+
+```sql
+SELECT COUNT(*) FROM Employee WHERE City = "Lethbridge";
+```
+
+</details>
+
 </details>
 
 ## Table - Invoice 
