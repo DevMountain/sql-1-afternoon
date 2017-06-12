@@ -96,6 +96,26 @@ SELECT * FROM Person WHERE Age > 20;
 
 </details>
 
+<details>
+
+<summary> <code> #7 </code> </summary>
+
+```sql
+SELECT * FROM Person WHERE Age = 18;
+```
+
+</details>
+
+<details>
+
+<summary> <code> #8 </code> </summary>
+
+```sql
+SELECT * FROM Person WHERE Age < 20 OR Age > 30
+```
+
+</details>
+
 
 
 <details>
