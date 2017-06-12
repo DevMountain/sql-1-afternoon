@@ -400,15 +400,102 @@ SELECT COUNT(*) FROM Employee WHERE City = "Lethbridge";
 
 ### Instructions
 
-1. Use the Invoice table for the following
-2. Count how many orders were made from the USA
-3. Find the largest order total amount
-4. Find the smallest order total amount
-5. Find all orders bigger than $5
-6. Count how many orders were smaller than $5
-7. Count how many orders were in CA, TX, or AZ (use IN)
-8. Get the average total of the orders
-9. Get the total sum of the orders
+1. Count how many orders were made from the USA.
+2. Find the largest order total amount.
+3. Find the smallest order total amount.
+4. Find all orders bigger than $5.
+5. Count how many orders were smaller than $5.
+6. Count how many orders were in CA, TX, or AZ (use IN).
+7. Get the average total of the orders.
+8. Get the total sum of the orders.
+
+### Solution
+
+<details>
+
+<summary> <code> SQL Solutions </code> </summary>
+
+<details>
+
+<summary> <code> #1 </code> </summary>
+
+```sql
+SELECT * FROM Invoice WHERE BillingCountry = "USA";
+```
+
+</details>
+
+<details>
+
+<summary> <code> #2 </code> </summary>
+
+```sql
+SELECT Max(total) FROM Invoice;
+```
+
+</details>
+
+<details>
+
+<summary> <code> #3 </code> </summary>
+
+```sql
+SELECT Min(total) FROM Invoice;
+```
+
+</details>
+
+<details>
+
+<summary> <code> #4 </code> </summary>
+
+```sql
+SELECT * FROM Invoice WHERE Total > 5;
+```
+
+</details>
+
+<details>
+
+<summary> <code> #5 </code> </summary>
+
+```sql
+SELECT COUNT(*) FROM Invoice WHERE Total < 5;
+```
+
+</details>
+
+<details>
+
+<summary> <code> #6 </code> </summary>
+
+```sql
+SELECT * FROM Invoice WHERE BillingState IN ( "CA", "TX", "AZ" );
+```
+
+</details>
+
+<details>
+
+<summary> <code> #7 </code> </summary>
+
+```sql
+SELECT AVG(Total) FROM Invoice;
+```
+
+</details>
+
+<details>
+
+<summary> <code> #8 </code> </summary>
+
+```sql
+SELECT SUM(Total) FROM Invoice;
+```
+
+</details>
+
+</details>
 
 ## Contributions
 
