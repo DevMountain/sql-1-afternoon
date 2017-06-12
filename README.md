@@ -13,7 +13,7 @@ Use [www.sqlteaching.com](http://www.sqlteaching.com/) or [sqlbolt.com](http://s
 ## Table - People
 
 ### Instructions
-1. Create a table called Person that records a person's Name, Age, Height, City, FavoriteColor, and Id. 
+1. Create a table called Person that records a person's ID, Name, Age, Height ( in cm ), City, FavoriteColor. 
     * ID should be an auto-incrementing id/primary key - Use type: INTEGER PRIMARY KEY AUTOINCREMENT
 2. Add 5 different people into the Person database. 
     * Remember to not include the ID because it should auto-increment.
@@ -37,7 +37,7 @@ Use [www.sqlteaching.com](http://www.sqlteaching.com/) or [sqlbolt.com](http://s
 <summary> <code> #1 </code> </summary>
 
 ```sql
-CREATE TABLE Person ( ID INTEGER PRIMARY KEY AUTOINCREMENT, Name string, Age integer, Height string, City string, FavoriteColor string );
+CREATE TABLE Person ( ID INTEGER PRIMARY KEY AUTOINCREMENT, Name string, Age integer, Height integer, City string, FavoriteColor string );
 ```
 
 </details>
@@ -47,7 +47,7 @@ CREATE TABLE Person ( ID INTEGER PRIMARY KEY AUTOINCREMENT, Name string, Age int
 <summary> <code> #2 </code> </summary>
 
 ```sql
-INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First Last", 21, "5'7", "Provo", "Purple" );
+INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First Last", 21, "Height", "City", "Color" );
 ```
 
 </details>
