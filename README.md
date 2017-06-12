@@ -19,7 +19,7 @@ Use [www.sqlteaching.com](http://www.sqlteaching.com/) or [sqlbolt.com](http://s
     * Remember to not include the ID because it should auto-increment.
 3. List all the people in the Person table by Height from tallest to shortest (descending)
 4. List all the people in the Person table by Height from shortest to tallest (ascending)
-5. List all the people in the Person table by oldest first
+5. List all the people in the Person table by Age from Oldest to Youngest (descending)
 6. List all the people in the Person table older than age 20.
 7. List all the people in the Person table that are exactly 18.
 8. List all the people in the Person table that are less than 20 and older than 30.
@@ -57,12 +57,32 @@ INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First La
 <summary> <code> #3 </code> </summary>
 
 ```sql
+SELECT * FROM Person ORDER BY Height DESC
+```
+
+</details>
+
+<details>
+
+<details>
+
+<summary> <code> #4 </code> </summary>
+
+```sql
 SELECT * FROM Person ORDER BY Height ASC
 ```
 
 </details>
 
 <details>
+
+<summary> <code> #5 </code> </summary>
+
+```sql
+SELECT * FROM Person ORDER BY Age DESC
+```
+
+</details>
 
 <summary> <code> Placeholder </code> </summary>
 
