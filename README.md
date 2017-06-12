@@ -217,12 +217,45 @@ INSERT INTO Orders ( PersonID, ProductName, ProductPrice, Quantity ) VALUES ( 0,
 
 </details>
 
+<details>
 
+<summary> <code> #3 </code> </summary>
 
+```sql
+SELECT * FROM Orders;
+```
 
+</details>
 
+<details>
 
+<summary> <code> #4 </code> </summary>
 
+```sql
+SELECT SUM(Quantity) FROM Orders;
+```
+
+</details>
+
+<details>
+
+<summary> <code> #5 </code> </summary>
+
+```sql
+SELECT SUM(ProductPrice) FROM Orders;
+```
+
+</details>
+
+<details>
+
+<summary> <code> #6 </code> </summary>
+
+```sql
+
+```
+
+</details>
 
 <details>
 
