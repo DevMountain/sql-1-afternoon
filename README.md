@@ -2,7 +2,7 @@
 
 # Project Summary
 
-In this project we will be practicing inserting and querying data using SQL. We'll make use of a handy online tool called Chinook that will also to write SQL online. <a href="http://jxs.me/chinook-web/">Click me</a>
+In this project we will be practicing inserting and querying data using SQL. We'll make use of a handy online tool called Chinook that we'll use to write SQL online. <a href="http://jxs.me/chinook-web/">Click me</a>
 
 On the left are the Tables with their fields, the right is where we will be writing our queries, and the bottom is where we will see our results.  
 
@@ -15,7 +15,8 @@ Use [www.sqlteaching.com](http://www.sqlteaching.com/) or [sqlbolt.com](http://s
 ### Instructions
 * Create a table called Person that records a person's Name, Age, Height, City, FavoriteColor, and Id. 
   * Id should be an auto-incrementing id/primary key - Use type: INTEGER PRIMARY KEY AUTOINCREMENT
-* Add 5 different people into the Person database. Remember to not include the Id because it should auto-increment.
+* Add 5 different people into the Person database. 
+  * Remember to not include the Id because it should auto-increment.
 * List the people in the Person table by Height from tallest to shortest (descending)
 * List the people in the Person table by Height from shortest to tallest (ascending)
 * List all the people in the Person table by oldest first
