@@ -189,7 +189,7 @@ SELECT * FROM Person WHERE FavoriteColor IN ( "yellow", "purple" )
 3. Select all the records from the Order table.
 4. Calculate the total number of products ordered.
 5. Calculate the total order price.
-6. Calculate the total order price by a PersonID.
+6. Calculate the total order price by a single PersonID.
 
 ### Solution
 
