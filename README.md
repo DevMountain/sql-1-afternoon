@@ -111,11 +111,40 @@ SELECT * FROM Person WHERE Age = 18;
 <summary> <code> #8 </code> </summary>
 
 ```sql
-SELECT * FROM Person WHERE Age < 20 OR Age > 30
+SELECT * FROM Person WHERE Age < 20 OR Age > 30;
 ```
 
 </details>
 
+<details>
+
+<summary> <code> #9 </code> </summary>
+
+```sql
+SELECT * FROM Person WHERE Age != 27;
+```
+
+</details>
+
+<details>
+
+<summary> <code> #10 </code> </summary>
+
+```sql
+SELECT * FROM Person WHERE FavoriteColor != "red";
+```
+
+</details>
+
+<details>
+
+<summary> <code> #11 </code> </summary>
+
+```sql
+SELECT * FROM Person WHERE FavoriteColor != "red" OR FavoriteColor != "blue";
+```
+
+</details>
 
 
 <details>
