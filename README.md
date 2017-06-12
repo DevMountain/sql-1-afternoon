@@ -261,12 +261,40 @@ SELECT SUM(ProductPrice) FROM Orders WHERE PersonID = 0;
 </details>
 
 ## Table - Artists
-7. Add 3 new Artists to the Artist table 
 
- * Select the top 10 artists in reverse alphabetical order
- * Select the top 5 artists in alphabetical order
- * Select all artists that start with the word Black
- * Select all artists that contain the word Black
+1. Add 3 new Artists to the Artist table. ( It's already created )
+2. Select the top 10 artists in reverse alphabetical order
+3. Select the top 5 artists in alphabetical order
+4. Select all artists that start with the word Black
+5. Select all artists that contain the word Black
+
+<details>
+
+<summary> SQL Solutions </summary>
+
+<br />
+
+<details>
+
+<summary> <code> #1 </code> </summary>
+
+```sql
+INSERT INTO Artists ( Name ) VALUES ( 'artist name' );
+```
+
+</details>
+
+<details>
+
+<summary> <code> #2 </code> </summary>
+
+```sql
+SELECT * FROM Artists ORDER BY Name Desc LIMIT 10;
+```
+
+</details>
+
+</details>
 
 ## Table - Employee
 8. Add 2 new Employees to the Employee table
