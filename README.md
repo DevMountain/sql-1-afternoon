@@ -64,8 +64,6 @@ SELECT * FROM Person ORDER BY Height DESC
 
 <details>
 
-<details>
-
 <summary> <code> #4 </code> </summary>
 
 ```sql
@@ -83,6 +81,8 @@ SELECT * FROM Person ORDER BY Age DESC
 ```
 
 </details>
+
+<details>
 
 <summary> <code> Placeholder </code> </summary>
 
