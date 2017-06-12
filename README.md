@@ -267,8 +267,8 @@ SELECT SUM(ProductPrice) FROM Orders WHERE PersonID = 0;
 1. Add 3 new Artists to the Artist table. ( It's already created )
 2. Select 10 artists in reverse alphabetical order.
 3. Select 5 artists in alphabetical order.
-4. Select all artists that start with the word Black
-5. Select all artists that contain the word Black
+4. Select all artists that start with the word "Black".
+5. Select all artists that contain the word "Black".
 
 ### Solution 
 
