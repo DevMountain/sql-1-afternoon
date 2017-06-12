@@ -209,8 +209,6 @@ SELECT * FROM Person WHERE FavoriteColor IN ( "yellow", "purple" )
 
 </details>
 
-</details>
-
 ## Table - Artists
 7. Add 3 new Artists to the Artist table 
 
