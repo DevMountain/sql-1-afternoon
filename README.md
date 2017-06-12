@@ -332,11 +332,11 @@ SELECT * FROM Artist WHERE Name LIKE '%Black%';
 
 ### Instructions
 
-1. List all Employee first and last names only that live in Calgary
-2. Find the first and last name and birthdate for the youngest employee
-3. Find the first and last name and birthdate for the oldest employee
-4. Find everyone that reports to Nancy Edwards (Use the ReportsTo column)
-5. Count how many people live in Lethbridge
+1. List all Employee first and last names only that live in Calgary.
+2. Find the first and last name and birthdate for the youngest employee.
+3. Find the first and last name and birthdate for the oldest employee.
+4. Find everyone that reports to Nancy Edwards (Use the ReportsTo column).
+5. Count how many people live in Lethbridge.
 
 ### Solution
 
@@ -397,16 +397,18 @@ SELECT COUNT(*) FROM Employee WHERE City = "Lethbridge";
 </details>
 
 ## Table - Invoice 
-9. Use the Invoice table for the following
 
-* Count how many orders were made from the USA
-* Find the largest order total amount
-* Find the smallest order total amount
-* Find all orders bigger than $5
-* Count how many orders were smaller than $5
-* Count how many orders were in CA, TX, or AZ (use IN)
-* Get the average total of the orders
-* Get the total sum of the orders
+### Instructions
+
+1. Use the Invoice table for the following
+2. Count how many orders were made from the USA
+3. Find the largest order total amount
+4. Find the smallest order total amount
+5. Find all orders bigger than $5
+6. Count how many orders were smaller than $5
+7. Count how many orders were in CA, TX, or AZ (use IN)
+8. Get the average total of the orders
+9. Get the total sum of the orders
 
 ## Contributions
 
