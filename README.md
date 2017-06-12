@@ -34,6 +34,10 @@ Use [www.sqlteaching.com](http://www.sqlteaching.com/) or [sqlbolt.com](http://s
 
 <details>
 
+<summary> <code> SQL Solutions </code> </summary>
+
+<details>
+
 <summary> <code> #1 </code> </summary>
 
 ```sql
@@ -105,6 +109,8 @@ INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First La
 INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First Last", 17, 100, "American Fork", "Pink" );
 INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First Last", 25, 201, "Daytona Beach", "Green" );
 ```
+
+</details>
 
 </details>
 
