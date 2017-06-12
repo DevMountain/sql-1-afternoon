@@ -28,7 +28,7 @@ Use [www.sqlteaching.com](http://www.sqlteaching.com/) or [sqlbolt.com](http://s
 11. List all the people in the Person table where their favorite color is not red or blue
 12. List all the people in the Person table where their favorite color is orange or green
 13. List all the people in the Person table where their favorite color is orange, green or blue (use IN)
-14. List all the people in the Person table where their favorite color is yellow or purple
+14. List all the people in the Person table where their favorite color is yellow or purple (use IN)
 
 ### Solution
 
@@ -146,17 +146,32 @@ SELECT * FROM Person WHERE FavoriteColor != "red" OR FavoriteColor != "blue";
 
 </details>
 
+<details>
+
+<summary> <code> #12 </code> </summary>
+
+```sql
+SELECT * FROM Person WHERE FavoriteColor = "orange" OR FavoriteColor = "green";
+```
+
+</details>
 
 <details>
 
-<summary> <code> Placeholder </code> </summary>
+<summary> <code> #13 </code> </summary>
 
 ```sql
-INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First Last", 21, 152, "Provo", "Red" );
-INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First Last", 14, 200, "Lehi", "Blue" );
-INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First Last", 19, 182, "Salt Lake", "Orange" );
-INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First Last", 17, 100, "American Fork", "Pink" );
-INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First Last", 25, 201, "Daytona Beach", "Green" );
+SELECT * FROM Person WHERE FavoriteColor IN ( "orange", "green", "blue" );
+```
+
+</details>
+
+<details>
+
+<summary> <code> #14 </code> </summary>
+
+```sql
+SELECT * FROM Person WHERE FavoriteColor IN ( "yellow", "purple" )
 ```
 
 </details>
