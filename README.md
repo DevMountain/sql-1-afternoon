@@ -14,23 +14,43 @@ Use [www.sqlteaching.com](http://www.sqlteaching.com/) or [sqlbolt.com](http://s
 
 ### Instructions
 1. Create a table called Person that records a person's Name, Age, Height, City, FavoriteColor, and Id. 
-    * Id should be an auto-incrementing id/primary key - Use type: INTEGER PRIMARY KEY AUTOINCREMENT
+    * ID should be an auto-incrementing id/primary key - Use type: INTEGER PRIMARY KEY AUTOINCREMENT
 2. Add 5 different people into the Person database. 
-    * Remember to not include the Id because it should auto-increment.
-3. List the people in the Person table by Height from tallest to shortest (descending)
-4. List the people in the Person table by Height from shortest to tallest (ascending)
+    * Remember to not include the ID because it should auto-increment.
+3. List all the people in the Person table by Height from tallest to shortest (descending)
+4. List all the people in the Person table by Height from shortest to tallest (ascending)
 5. List all the people in the Person table by oldest first
 6. List all the people in the Person table older than age 20.
 7. List all the people in the Person table that are exactly 18.
-8. List all Person that are less than 20 and older than 30.
-9. List all Person that are not 27 (Use not equals)
-10. List all Person where their favorite color is not red
-11. List all Person where their favorite color is not red or blue
-12. List all Person where their favorite color is orange or green
-13. List all Person where their favorite color is orange, green or blue (use IN)
-14. List all Person where their favorite color is yellow or purple
+8. List all the people in the Person table that are less than 20 and older than 30.
+9. List all the people in the Person table that are not 27 (Use not equals)
+10. List all the people in the Person table where their favorite color is not red
+11. List all the people in the Person table where their favorite color is not red or blue
+12. List all the people in the Person table where their favorite color is orange or green
+13. List all the people in the Person table where their favorite color is orange, green or blue (use IN)
+14. List all the people in the Person table where their favorite color is yellow or purple
 
+### Solution
 
+<details>
+
+<summary> <code> #1 </code> </summary>
+
+```sql
+CREATE TABLE Person ( ID INTEGER PRIMARY KEY AUTOINCREMENT, Name string, Age integer, Height string, City string, FavoriteColor string );
+```
+
+</details>
+
+<details>
+
+<summary> <code> #2 </code> </summary>
+
+```sql
+INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First Last", 21, "5'7", "Provo", "Purple" );
+```
+
+</details>
 
 ## Table - Order
 4. Create a table called Orders that records the productName, productPrice, Quantity, and personId  
