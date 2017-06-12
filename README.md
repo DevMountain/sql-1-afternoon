@@ -262,11 +262,15 @@ SELECT SUM(ProductPrice) FROM Orders WHERE PersonID = 0;
 
 ## Table - Artists
 
+### Instructions
+
 1. Add 3 new Artists to the Artist table. ( It's already created )
 2. Select 10 artists in reverse alphabetical order.
 3. Select 5 artists in alphabetical order.
 4. Select all artists that start with the word Black
 5. Select all artists that contain the word Black
+
+### Solution 
 
 <details>
 
@@ -312,16 +316,75 @@ SELECT * FROM Artist WHERE Name LIKE 'Black%';
 
 </details>
 
+<details>
+
+<summary> <code> #5 </code> </summary>
+
+```sql
+SELECT * FROM Artist WHERE Name LIKE '%Black%';
+```
+
+</details>
+
 </details>
 
 ## Table - Employee
-8. Add 2 new Employees to the Employee table
 
-* List all Employee first and last names only that live in Calgary
-* Find the first and last name for the youngest employee
-* Find the first and last name for the oldest employee
-* Find everyone that reports to Nancy Edwards (Use the ReportsTo column)
-* Count how many people live in Lethbridge
+### Instructions
+
+1. List all Employee first and last names only that live in Calgary
+2. Find the first and last name and birthdate for the youngest employee
+3. Find the first and last name and birthdate for the oldest employee
+4. Find everyone that reports to Nancy Edwards (Use the ReportsTo column)
+5. Count how many people live in Lethbridge
+
+### Solution
+
+<details>
+
+<summary> <code> SQL Solutions </code> </summary>
+
+<details>
+
+<summary> <code> #1 </code> </summary>
+
+```sql
+SELECT LastName, FirstName FROM Employee WHERE City = "Calgary";
+```
+
+</details>
+
+<details>
+
+<summary> <code> #2 </code> </summary>
+
+```sql
+SELECT FirstName, LastName, Min(BirthDate) FROM Employee;
+```
+
+</details>
+
+<details>
+
+<summary> <code> #3 </code> </summary>
+
+```sql
+SELECT FirstName, LastName, Max(BirthDate) FROM Employee;
+```
+
+</details>
+
+<details>
+
+<summary> <code> #4 </code> </summary>
+
+```sql
+SELECT * FROM Employee WHERE ReportsTo = 2;
+```
+
+</details>
+
+</details>
 
 ## Table - Invoice 
 9. Use the Invoice table for the following
