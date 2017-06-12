@@ -189,7 +189,7 @@ SELECT * FROM Person WHERE FavoriteColor IN ( "yellow", "purple" )
 3. Select all the records from the Order table.
 4. Calculate the total number of products ordered.
 5. Calculate the total order price.
-6. Calculate the total order price By PersonID.
+6. Calculate the total order price by a PersonID.
 
 ### Solution
 
@@ -252,7 +252,8 @@ SELECT SUM(ProductPrice) FROM Orders;
 <summary> <code> #6 </code> </summary>
 
 ```sql
-
+/* The value of PersonID depends on what IDs you used. Use a valid ID from your table */
+SELECT SUM(ProductPrice) FROM Orders WHERE PersonID = 0;
 ```
 
 </details>
