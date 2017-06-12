@@ -263,23 +263,21 @@ SELECT SUM(ProductPrice) FROM Orders WHERE PersonID = 0;
 ## Table - Artists
 
 1. Add 3 new Artists to the Artist table. ( It's already created )
-2. Select the top 10 artists in reverse alphabetical order
-3. Select the top 5 artists in alphabetical order
+2. Select 10 artists in reverse alphabetical order.
+3. Select 5 artists in alphabetical order.
 4. Select all artists that start with the word Black
 5. Select all artists that contain the word Black
 
 <details>
 
-<summary> SQL Solutions </summary>
-
-<br />
+<summary> <code> SQL Solutions </code> </summary>
 
 <details>
 
 <summary> <code> #1 </code> </summary>
 
 ```sql
-INSERT INTO Artists ( Name ) VALUES ( 'artist name' );
+INSERT INTO Artist ( Name ) VALUES ( 'artist name' );
 ```
 
 </details>
@@ -289,7 +287,27 @@ INSERT INTO Artists ( Name ) VALUES ( 'artist name' );
 <summary> <code> #2 </code> </summary>
 
 ```sql
-SELECT * FROM Artists ORDER BY Name Desc LIMIT 10;
+SELECT * FROM Artist ORDER BY Name Desc LIMIT 10;
+```
+
+</details>
+
+<details>
+
+<summary> <code> #3 </code> </summary>
+
+```sql
+SELECT * FROM Artist ORDER BY Name ASC LIMIT 5;
+```
+
+</details>
+
+<details>
+
+<summary> <code> #4 </code> </summary>
+
+```sql
+SELECT * FROM Artist WHERE Name LIKE 'Black%';
 ```
 
 </details>
