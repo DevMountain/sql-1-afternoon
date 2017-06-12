@@ -258,31 +258,6 @@ SELECT SUM(ProductPrice) FROM Orders WHERE PersonID = 0;
 
 </details>
 
-<details>
-
-<summary> <code> Placeholder </code> </summary>
-
-```sql
-INSERT INTO Orders ( PersonID, ProductName, ProductPrice, Quantity )
-VALUES ( 0, "Burger", 12.50, 2 );
-
-INSERT INTO Orders ( PersonID, ProductName, ProductPrice, Quantity )
-VALUES ( 0, "Product", 12.50, 4 );
-
-INSERT INTO Orders ( PersonID, ProductName, ProductPrice, Quantity )
-VALUES ( 1, "Product", 13.32, 3 );
-
-INSERT INTO Orders ( PersonID, ProductName, ProductPrice, Quantity )
-VALUES ( 1, "Product", 19.75, 1 );
-
-INSERT INTO Orders ( PersonID, ProductName, ProductPrice, Quantity )
-VALUES ( 0, "Product", 20.21, 5 );
-```
-
-</details>
-
-
-
 </details>
 
 ## Table - Artists
