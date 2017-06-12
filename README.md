@@ -179,13 +179,37 @@ SELECT * FROM Person WHERE FavoriteColor IN ( "yellow", "purple" )
 </details>
 
 ## Table - Order
-4. Create a table called Orders that records the productName, productPrice, Quantity, and personId  
-5. Add 5 Orders to Order table
-6. Select all the records from the Order table
 
-  * Calculate the total number of products Ordered
-  * Calculate the total Order Price
-  * Calculate the total Order Price By personId (If you only made orders for 1 person, go add more for the other people)
+### Instructions
+
+1. Create a table called Orders that records: PersonID, productName, productPrice, Quantity.
+    * PersonID should be different for different people.
+    * Make orders for at least two different people.
+2. Add 5 Orders to Order table.
+3. Select all the records from the Order table.
+4. Calculate the total number of products ordered.
+5. Calculate the total order price.
+6. Calculate the total order price By PersonID.
+
+### Solution
+
+<details>
+
+<summary> <code> SQL Solutions </code> </summary>
+
+<details>
+
+<summary> <code> #1 </code> </summary>
+
+```
+
+```
+
+</details>
+
+</details>
+
+</details>
 
 ## Table - Artists
 7. Add 3 new Artists to the Artist table 
