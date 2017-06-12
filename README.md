@@ -47,7 +47,31 @@ CREATE TABLE Person ( ID INTEGER PRIMARY KEY AUTOINCREMENT, Name string, Age int
 <summary> <code> #2 </code> </summary>
 
 ```sql
-INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First Last", 21, "Height", "City", "Color" );
+INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First Last", 21, 182, "City", "Color" );
+```
+
+</details>
+
+<details>
+
+<summary> <code> #3 </code> </summary>
+
+```sql
+SELECT * FROM Person ORDER BY Height ASC
+```
+
+</details>
+
+<details>
+
+<summary> <code> Placeholder </code> </summary>
+
+```sql
+INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First Last", 21, 152, "Provo", "Red" );
+INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First Last", 14, 200, "Lehi", "Blue" );
+INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First Last", 19, 182, "Salt Lake", "Orange" );
+INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First Last", 17, 100, "American Fork", "Pink" );
+INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First Last", 25, 201, "Daytona Beach", "Green" );
 ```
 
 </details>
