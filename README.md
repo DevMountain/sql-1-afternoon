@@ -17,9 +17,9 @@ Use [www.sqlteaching.com](http://www.sqlteaching.com/) or [sqlbolt.com](http://s
     * ID should be an auto-incrementing id/primary key - Use type: INTEGER PRIMARY KEY AUTOINCREMENT
 2. Add 5 different people into the Person database. 
     * Remember to not include the ID because it should auto-increment.
-3. List all the people in the Person table by Height from tallest to shortest (descending)
-4. List all the people in the Person table by Height from shortest to tallest (ascending)
-5. List all the people in the Person table by Age from Oldest to Youngest (descending)
+3. List all the people in the Person table by Height from tallest to shortest.
+4. List all the people in the Person table by Height from shortest to tallest.
+5. List all the people in the Person table by Age from Oldest to Youngest.
 6. List all the people in the Person table older than age 20.
 7. List all the people in the Person table that are exactly 18.
 8. List all the people in the Person table that are less than 20 and older than 30.
