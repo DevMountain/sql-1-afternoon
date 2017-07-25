@@ -359,7 +359,9 @@ SELECT LastName, FirstName FROM Employee WHERE City = "Calgary";
 <summary> <code> #2 </code> </summary>
 
 ```sql
-SELECT FirstName, LastName, Min(BirthDate) FROM Employee;
+SELECT FirstName, LastName, BirthDate FROM Employee
+ORDER BY BirthDate
+LIMIT 1;
 ```
 
 </details>
@@ -369,7 +371,9 @@ SELECT FirstName, LastName, Min(BirthDate) FROM Employee;
 <summary> <code> #3 </code> </summary>
 
 ```sql
-SELECT FirstName, LastName, Max(BirthDate) FROM Employee;
+SELECT FirstName, LastName, BirthDate FROM Employee
+ORDER BY BirthDate DESC
+LIMIT 1;
 ```
 
 </details>
