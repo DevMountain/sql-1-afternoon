@@ -25,7 +25,7 @@ Use [www.sqlteaching.com](http://www.sqlteaching.com/) or [sqlbolt.com](http://s
 8. List all the people in the Person table that are less than 20 and older than 30.
 9. List all the people in the Person table that are not 27 (Use not equals).
 10. List all the people in the Person table where their favorite color is not red.
-11. List all the people in the Person table where their favorite color is not red or blue.
+11. List all the people in the Person table where their favorite color is not red and is not blue.
 12. List all the people in the Person table where their favorite color is orange or green.
 13. List all the people in the Person table where their favorite color is orange, green or blue (use IN).
 14. List all the people in the Person table where their favorite color is yellow or purple (use IN).
@@ -141,7 +141,7 @@ SELECT * FROM Person WHERE FavoriteColor != "red";
 <summary> <code> #11 </code> </summary>
 
 ```sql
-SELECT * FROM Person WHERE FavoriteColor != "red" OR FavoriteColor != "blue";
+SELECT * FROM Person WHERE FavoriteColor != "red" AND FavoriteColor != "blue";
 ```
 
 </details>
