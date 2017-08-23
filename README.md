@@ -470,7 +470,7 @@ SELECT COUNT(*) FROM Invoice WHERE Total < 5;
 <summary> <code> #6 </code> </summary>
 
 ```sql
-SELECT * FROM Invoice WHERE BillingState IN ( "CA", "TX", "AZ" );
+SELECT count(*) FROM Invoice WHERE BillingState IN ( "CA", "TX", "AZ" );
 ```
 
 </details>
