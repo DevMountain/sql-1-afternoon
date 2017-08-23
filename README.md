@@ -359,7 +359,7 @@ SELECT LastName, FirstName FROM Employee WHERE City = "Calgary";
 <summary> <code> #2 </code> </summary>
 
 ```sql
-SELECT FirstName, LastName, Min(BirthDate) FROM Employee;
+SELECT FirstName, LastName, Max(BirthDate) FROM Employee;
 ```
 
 </details>
@@ -369,7 +369,7 @@ SELECT FirstName, LastName, Min(BirthDate) FROM Employee;
 <summary> <code> #3 </code> </summary>
 
 ```sql
-SELECT FirstName, LastName, Max(BirthDate) FROM Employee;
+SELECT FirstName, LastName, Min(BirthDate) FROM Employee;
 ```
 
 </details>
@@ -470,7 +470,7 @@ SELECT COUNT(*) FROM Invoice WHERE Total < 5;
 <summary> <code> #6 </code> </summary>
 
 ```sql
-SELECT * FROM Invoice WHERE BillingState IN ( "CA", "TX", "AZ" );
+SELECT count(*) FROM Invoice WHERE BillingState IN ( "CA", "TX", "AZ" );
 ```
 
 </details>
