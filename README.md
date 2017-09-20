@@ -336,6 +336,7 @@ SELECT * FROM Artist WHERE Name LIKE '%Black%';
 2. Find the first and last name and birthdate for the youngest employee.
 3. Find the first and last name and birthdate for the oldest employee.
 4. Find everyone that reports to Nancy Edwards (Use the ReportsTo column).
+   * You will need to query the employee table to find the Id for Nancy Edwards
 5. Count how many people live in Lethbridge.
 
 ### Solution
