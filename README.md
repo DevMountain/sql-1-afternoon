@@ -178,15 +178,15 @@ SELECT * FROM Person WHERE FavoriteColor IN ( "yellow", "purple" )
 
 </details>
 
-## Table - Order
+## Table - Orders
 
 ### Instructions
 
 1. Create a table called Orders that records: PersonID, ProductName, ProductPrice, Quantity.
-    * PersonID should be different for different people.
+2. Add 5 Orders to the Orders table.
     * Make orders for at least two different people.
-2. Add 5 Orders to Order table.
-3. Select all the records from the Order table.
+    * PersonID should be different for different people.
+3. Select all the records from the Orders table.
 4. Calculate the total number of products ordered.
 5. Calculate the total order price.
 6. Calculate the total order price by a single PersonID.
@@ -242,7 +242,7 @@ SELECT SUM(Quantity) FROM Orders;
 <summary> <code> #5 </code> </summary>
 
 ```sql
-SELECT SUM(ProductPrice) FROM Orders;
+SELECT SUM(ProductPrice * Quantity) FROM Orders;
 ```
 
 </details>
@@ -253,14 +253,14 @@ SELECT SUM(ProductPrice) FROM Orders;
 
 ```sql
 /* The value of PersonID depends on what IDs you used. Use a valid ID from your table */
-SELECT SUM(ProductPrice) FROM Orders WHERE PersonID = 0;
+SELECT SUM(ProductPrice * Quantity) FROM Orders WHERE PersonID = 0;
 ```
 
 </details>
 
 </details>
 
-## Table - Artists
+## Table - Artist
 
 ### Instructions
 
@@ -336,6 +336,7 @@ SELECT * FROM Artist WHERE Name LIKE '%Black%';
 2. Find the first and last name and birthdate for the youngest employee.
 3. Find the first and last name and birthdate for the oldest employee.
 4. Find everyone that reports to Nancy Edwards (Use the ReportsTo column).
+   * You will need to query the employee table to find the Id for Nancy Edwards
 5. Count how many people live in Lethbridge.
 
 ### Solution
@@ -349,7 +350,7 @@ SELECT * FROM Artist WHERE Name LIKE '%Black%';
 <summary> <code> #1 </code> </summary>
 
 ```sql
-SELECT LastName, FirstName FROM Employee WHERE City = "Calgary";
+SELECT FirstName, LastName FROM Employee WHERE City = "Calgary";
 ```
 
 </details>
@@ -359,7 +360,7 @@ SELECT LastName, FirstName FROM Employee WHERE City = "Calgary";
 <summary> <code> #2 </code> </summary>
 
 ```sql
-SELECT FirstName, LastName, Min(BirthDate) FROM Employee;
+SELECT FirstName, LastName, Max(BirthDate) FROM Employee;
 ```
 
 </details>
@@ -369,7 +370,7 @@ SELECT FirstName, LastName, Min(BirthDate) FROM Employee;
 <summary> <code> #3 </code> </summary>
 
 ```sql
-SELECT FirstName, LastName, Max(BirthDate) FROM Employee;
+SELECT FirstName, LastName, Min(BirthDate) FROM Employee;
 ```
 
 </details>
@@ -420,7 +421,7 @@ SELECT COUNT(*) FROM Employee WHERE City = "Lethbridge";
 <summary> <code> #1 </code> </summary>
 
 ```sql
-SELECT * FROM Invoice WHERE BillingCountry = "USA";
+SELECT Count(*) FROM Invoice WHERE BillingCountry = 'USA';
 ```
 
 </details>
@@ -470,7 +471,7 @@ SELECT COUNT(*) FROM Invoice WHERE Total < 5;
 <summary> <code> #6 </code> </summary>
 
 ```sql
-SELECT * FROM Invoice WHERE BillingState IN ( "CA", "TX", "AZ" );
+SELECT Count(*) FROM Invoice WHERE BillingState in ('CA', 'TX', 'AZ');
 ```
 
 </details>
