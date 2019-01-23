@@ -2,7 +2,7 @@
 
 # Project Summary
 
-In this project we will be practicing inserting and querying data using SQL. We'll make use of a handy online tool called Chinook that we'll use to write SQL online. <a href="http://jxs.me/chinook-web/">Click me</a>
+In this project we will be practicing inserting and querying data using SQL. We'll make use of a handy online tool provided by DevMountain that will allow us to write SQL online. <a href="https://postgres.devmountain.com/">Click me</a>
 
 On the left are the Tables with their fields, the right is where we will be writing our queries, and the bottom is where we will see our results.  
 
@@ -13,22 +13,22 @@ Use [www.sqlteaching.com](http://www.sqlteaching.com/) or [sqlbolt.com](http://s
 ## Table - People
 
 ### Instructions
-1. Create a table called Person that records a person's ID, Name, Age, Height ( in cm ), City, FavoriteColor. 
-    * ID should be an auto-incrementing id/primary key - Use type: INTEGER PRIMARY KEY AUTOINCREMENT
-2. Add 5 different people into the Person database. 
-    * Remember to not include the ID because it should auto-increment.
-3. List all the people in the Person table by Height from tallest to shortest.
-4. List all the people in the Person table by Height from shortest to tallest.
-5. List all the people in the Person table by Age from oldest to youngest.
-6. List all the people in the Person table older than age 20.
-7. List all the people in the Person table that are exactly 18.
-8. List all the people in the Person table that are less than 20 and older than 30.
-9. List all the people in the Person table that are not 27 (Use not equals).
-10. List all the people in the Person table where their favorite color is not red.
-11. List all the people in the Person table where their favorite color is not red and is not blue.
-12. List all the people in the Person table where their favorite color is orange or green.
-13. List all the people in the Person table where their favorite color is orange, green or blue (use IN).
-14. List all the people in the Person table where their favorite color is yellow or purple (use IN).
+1. Create a table called person that records a person's id, name, age, height ( in cm ), city, favorite_color. 
+    * id should be an auto-incrementing id/primary key - Use type: SERIAL
+2. Add 5 different people into the person database. 
+    * Remember to not include the person_id because it should auto-increment.
+3. List all the people in the person table by height from tallest to shortest.
+4. List all the people in the person table by height from shortest to tallest.
+5. List all the people in the person table by age from oldest to youngest.
+6. List all the people in the person table older than age 20.
+7. List all the people in the person table that are exactly 18.
+8. List all the people in the person table that are less than 20 and older than 30.
+9. List all the people in the person table that are not 27 (Use not equals).
+10. List all the people in the person table where their favorite color is not red.
+11. List all the people in the person table where their favorite color is not red and is not blue.
+12. List all the people in the person table where their favorite color is orange or green.
+13. List all the people in the person table where their favorite color is orange, green or blue (use IN).
+14. List all the people in the person table where their favorite color is yellow or purple (use IN).
 
 ### Solution
 
@@ -41,7 +41,7 @@ Use [www.sqlteaching.com](http://www.sqlteaching.com/) or [sqlbolt.com](http://s
 <summary> <code> #1 </code> </summary>
 
 ```sql
-CREATE TABLE Person ( ID INTEGER PRIMARY KEY AUTOINCREMENT, Name string, Age integer, Height integer, City string, FavoriteColor string );
+CREATE TABLE person ( person_id SERIAL, name VARCHAR(200), age INTEGER, height INTEGER, city VARCHAR(200), favorite_color VARCHAR(200) );
 ```
 
 </details>
@@ -51,7 +51,7 @@ CREATE TABLE Person ( ID INTEGER PRIMARY KEY AUTOINCREMENT, Name string, Age int
 <summary> <code> #2 </code> </summary>
 
 ```sql
-INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First Last", 21, 182, "City", "Color" );
+INSERT INTO person ( name, age, height, city, favorite_color ) VALUES ( 'First Last', 21, 182, 'City', 'Color' );
 ```
 
 </details>
@@ -61,7 +61,7 @@ INSERT INTO Person ( Name, Age, Height, City, FavoriteColor ) VALUES ( "First La
 <summary> <code> #3 </code> </summary>
 
 ```sql
-SELECT * FROM Person ORDER BY Height DESC;
+SELECT * FROM person ORDER BY height DESC;
 ```
 
 </details>
@@ -71,7 +71,7 @@ SELECT * FROM Person ORDER BY Height DESC;
 <summary> <code> #4 </code> </summary>
 
 ```sql
-SELECT * FROM Person ORDER BY Height ASC;
+SELECT * FROM person ORDER BY height ASC;
 ```
 
 </details>
@@ -81,7 +81,7 @@ SELECT * FROM Person ORDER BY Height ASC;
 <summary> <code> #5 </code> </summary>
 
 ```sql
-SELECT * FROM Person ORDER BY Age DESC;
+SELECT * FROM person ORDER BY age DESC;
 ```
 
 </details>
@@ -91,7 +91,7 @@ SELECT * FROM Person ORDER BY Age DESC;
 <summary> <code> #6 </code> </summary>
 
 ```sql
-SELECT * FROM Person WHERE Age > 20;
+SELECT * FROM person WHERE age > 20;
 ```
 
 </details>
@@ -101,7 +101,7 @@ SELECT * FROM Person WHERE Age > 20;
 <summary> <code> #7 </code> </summary>
 
 ```sql
-SELECT * FROM Person WHERE Age = 18;
+SELECT * FROM person WHERE age = 18;
 ```
 
 </details>
@@ -111,7 +111,7 @@ SELECT * FROM Person WHERE Age = 18;
 <summary> <code> #8 </code> </summary>
 
 ```sql
-SELECT * FROM Person WHERE Age < 20 OR Age > 30;
+SELECT * FROM person WHERE age < 20 OR age > 30;
 ```
 
 </details>
@@ -121,7 +121,7 @@ SELECT * FROM Person WHERE Age < 20 OR Age > 30;
 <summary> <code> #9 </code> </summary>
 
 ```sql
-SELECT * FROM Person WHERE Age != 27;
+SELECT * FROM person WHERE age != 27;
 ```
 
 </details>
@@ -131,7 +131,7 @@ SELECT * FROM Person WHERE Age != 27;
 <summary> <code> #10 </code> </summary>
 
 ```sql
-SELECT * FROM Person WHERE FavoriteColor != "red";
+SELECT * FROM person WHERE favorite_color != 'red';
 ```
 
 </details>
@@ -141,7 +141,7 @@ SELECT * FROM Person WHERE FavoriteColor != "red";
 <summary> <code> #11 </code> </summary>
 
 ```sql
-SELECT * FROM Person WHERE FavoriteColor != "red" AND FavoriteColor != "blue";
+SELECT * FROM person WHERE favorite_color != 'red' AND favorite_color != 'blue';
 ```
 
 </details>
@@ -151,7 +151,7 @@ SELECT * FROM Person WHERE FavoriteColor != "red" AND FavoriteColor != "blue";
 <summary> <code> #12 </code> </summary>
 
 ```sql
-SELECT * FROM Person WHERE FavoriteColor = "orange" OR FavoriteColor = "green";
+SELECT * FROM person WHERE favorite_color = 'orange' OR favorite_color = 'green';
 ```
 
 </details>
@@ -161,7 +161,7 @@ SELECT * FROM Person WHERE FavoriteColor = "orange" OR FavoriteColor = "green";
 <summary> <code> #13 </code> </summary>
 
 ```sql
-SELECT * FROM Person WHERE FavoriteColor IN ( "orange", "green", "blue" );
+SELECT * FROM person WHERE favorite_color IN ( 'orange', 'green', 'blue' );
 ```
 
 </details>
@@ -171,25 +171,25 @@ SELECT * FROM Person WHERE FavoriteColor IN ( "orange", "green", "blue" );
 <summary> <code> #14 </code> </summary>
 
 ```sql
-SELECT * FROM Person WHERE FavoriteColor IN ( "yellow", "purple" )
+SELECT * FROM person WHERE favorite_color IN ( 'yellow', 'purple' )
 ```
 
 </details>
 
 </details>
 
-## Table - Orders
+## Table - orders
 
 ### Instructions
 
-1. Create a table called Orders that records: PersonID, ProductName, ProductPrice, Quantity.
-2. Add 5 Orders to the Orders table.
+1. Create a table called orders that records: person_id, product_name, product_price, quantity.
+2. Add 5 orders to the orders table.
     * Make orders for at least two different people.
-    * PersonID should be different for different people.
-3. Select all the records from the Orders table.
+    * person_id should be different for different people.
+3. Select all the records from the orders table.
 4. Calculate the total number of products ordered.
 5. Calculate the total order price.
-6. Calculate the total order price by a single PersonID.
+6. Calculate the total order price by a single person_id.
 
 ### Solution
 
@@ -202,7 +202,7 @@ SELECT * FROM Person WHERE FavoriteColor IN ( "yellow", "purple" )
 <summary> <code> #1 </code> </summary>
 
 ```sql
-CREATE TABLE Orders ( PersonID integer, ProductName string, ProductPrice float, Quantity integer );
+CREATE TABLE orders ( person_id SERIAL, product_name VARCHAR(200), product_price NUMERIC, quantity INTEGER );
 ```
 
 </details>
@@ -212,7 +212,7 @@ CREATE TABLE Orders ( PersonID integer, ProductName string, ProductPrice float, 
 <summary> <code> #2 </code> </summary>
 
 ```sql
-INSERT INTO Orders ( PersonID, ProductName, ProductPrice, Quantity ) VALUES ( 0, "Product", 12.50, 2 );
+INSERT INTO orders ( person_id, product_name, product_price, quantity ) VALUES ( 0, 'Product', 12.50, 2 );
 ```
 
 </details>
@@ -222,7 +222,7 @@ INSERT INTO Orders ( PersonID, ProductName, ProductPrice, Quantity ) VALUES ( 0,
 <summary> <code> #3 </code> </summary>
 
 ```sql
-SELECT * FROM Orders;
+SELECT * FROM orders;
 ```
 
 </details>
@@ -232,7 +232,7 @@ SELECT * FROM Orders;
 <summary> <code> #4 </code> </summary>
 
 ```sql
-SELECT SUM(Quantity) FROM Orders;
+SELECT SUM(quantity) FROM orders;
 ```
 
 </details>
@@ -242,7 +242,7 @@ SELECT SUM(Quantity) FROM Orders;
 <summary> <code> #5 </code> </summary>
 
 ```sql
-SELECT SUM(ProductPrice * Quantity) FROM Orders;
+SELECT SUM(product_price * quantity) FROM orders;
 ```
 
 </details>
@@ -252,23 +252,23 @@ SELECT SUM(ProductPrice * Quantity) FROM Orders;
 <summary> <code> #6 </code> </summary>
 
 ```sql
-/* The value of PersonID depends on what IDs you used. Use a valid ID from your table */
-SELECT SUM(ProductPrice * Quantity) FROM Orders WHERE PersonID = 0;
+/* The value of person_id depends on what IDs you used. Use a valid ID from your table */
+SELECT SUM(product_price * quantity) FROM orders WHERE person_id = 0;
 ```
 
 </details>
 
 </details>
 
-## Table - Artist
+## Table - artist
 
 ### Instructions
 
-1. Add 3 new Artists to the Artist table. ( It's already created )
+1. Add 3 new artists to the artist table. ( It's already created )
 2. Select 10 artists in reverse alphabetical order.
 3. Select 5 artists in alphabetical order.
-4. Select all artists that start with the word "Black".
-5. Select all artists that contain the word "Black".
+4. Select all artists that start with the word 'Black'.
+5. Select all artists that contain the word 'Black'.
 
 ### Solution 
 
@@ -281,7 +281,7 @@ SELECT SUM(ProductPrice * Quantity) FROM Orders WHERE PersonID = 0;
 <summary> <code> #1 </code> </summary>
 
 ```sql
-INSERT INTO Artist ( Name ) VALUES ( 'artist name' );
+INSERT INTO artist ( name ) VALUES ( 'artist name' );
 ```
 
 </details>
@@ -291,7 +291,7 @@ INSERT INTO Artist ( Name ) VALUES ( 'artist name' );
 <summary> <code> #2 </code> </summary>
 
 ```sql
-SELECT * FROM Artist ORDER BY Name Desc LIMIT 10;
+SELECT * FROM artist ORDER BY name DESC LIMIT 10;
 ```
 
 </details>
@@ -301,7 +301,7 @@ SELECT * FROM Artist ORDER BY Name Desc LIMIT 10;
 <summary> <code> #3 </code> </summary>
 
 ```sql
-SELECT * FROM Artist ORDER BY Name ASC LIMIT 5;
+SELECT * FROM artist ORDER BY name ASC LIMIT 5;
 ```
 
 </details>
@@ -311,7 +311,7 @@ SELECT * FROM Artist ORDER BY Name ASC LIMIT 5;
 <summary> <code> #4 </code> </summary>
 
 ```sql
-SELECT * FROM Artist WHERE Name LIKE 'Black%';
+SELECT * FROM artist WHERE name LIKE 'Black%';
 ```
 
 </details>
@@ -321,20 +321,20 @@ SELECT * FROM Artist WHERE Name LIKE 'Black%';
 <summary> <code> #5 </code> </summary>
 
 ```sql
-SELECT * FROM Artist WHERE Name LIKE '%Black%';
+SELECT * FROM artist WHERE name LIKE '%Black%';
 ```
 
 </details>
 
 </details>
 
-## Table - Employee
+## Table - employee
 
 ### Instructions
 
-1. List all Employee first and last names only that live in Calgary.
-2. Find the first and last name and birthdate for the youngest employee.
-3. Find the first and last name and birthdate for the oldest employee.
+1. List all employee first and last names only that live in Calgary.
+2. Find the birthdate for the youngest employee.
+3. Find the birthdate for the oldest employee.
 4. Find everyone that reports to Nancy Edwards (Use the ReportsTo column).
    * You will need to query the employee table to find the Id for Nancy Edwards
 5. Count how many people live in Lethbridge.
@@ -350,7 +350,7 @@ SELECT * FROM Artist WHERE Name LIKE '%Black%';
 <summary> <code> #1 </code> </summary>
 
 ```sql
-SELECT FirstName, LastName FROM Employee WHERE City = "Calgary";
+SELECT first_name, last_name FROM employee WHERE city = 'Calgary';
 ```
 
 </details>
@@ -360,7 +360,7 @@ SELECT FirstName, LastName FROM Employee WHERE City = "Calgary";
 <summary> <code> #2 </code> </summary>
 
 ```sql
-SELECT FirstName, LastName, Max(BirthDate) FROM Employee;
+SELECT MAX(birth_date) from employee;
 ```
 
 </details>
@@ -370,7 +370,7 @@ SELECT FirstName, LastName, Max(BirthDate) FROM Employee;
 <summary> <code> #3 </code> </summary>
 
 ```sql
-SELECT FirstName, LastName, Min(BirthDate) FROM Employee;
+SELECT MIN(birth_date) from employee;
 ```
 
 </details>
@@ -380,7 +380,7 @@ SELECT FirstName, LastName, Min(BirthDate) FROM Employee;
 <summary> <code> #4 </code> </summary>
 
 ```sql
-SELECT * FROM Employee WHERE ReportsTo = 2;
+SELECT * FROM employee WHERE reports_to = 2;
 ```
 
 </details>
@@ -390,14 +390,14 @@ SELECT * FROM Employee WHERE ReportsTo = 2;
 <summary> <code> #5 </code> </summary>
 
 ```sql
-SELECT COUNT(*) FROM Employee WHERE City = "Lethbridge";
+SELECT COUNT(*) FROM employee WHERE city = 'Lethbridge';
 ```
 
 </details>
 
 </details>
 
-## Table - Invoice 
+## Table - invoice 
 
 ### Instructions
 
@@ -421,7 +421,7 @@ SELECT COUNT(*) FROM Employee WHERE City = "Lethbridge";
 <summary> <code> #1 </code> </summary>
 
 ```sql
-SELECT Count(*) FROM Invoice WHERE BillingCountry = 'USA';
+SELECT COUNT(*) FROM invoice WHERE billing_country = 'USA';
 ```
 
 </details>
@@ -431,7 +431,7 @@ SELECT Count(*) FROM Invoice WHERE BillingCountry = 'USA';
 <summary> <code> #2 </code> </summary>
 
 ```sql
-SELECT Max(total) FROM Invoice;
+SELECT MAX(total) FROM invoice;
 ```
 
 </details>
@@ -441,7 +441,7 @@ SELECT Max(total) FROM Invoice;
 <summary> <code> #3 </code> </summary>
 
 ```sql
-SELECT Min(total) FROM Invoice;
+SELECT MIN(total) FROM invoice;
 ```
 
 </details>
@@ -451,7 +451,7 @@ SELECT Min(total) FROM Invoice;
 <summary> <code> #4 </code> </summary>
 
 ```sql
-SELECT * FROM Invoice WHERE Total > 5;
+SELECT * FROM invoice WHERE total > 5;
 ```
 
 </details>
@@ -461,7 +461,7 @@ SELECT * FROM Invoice WHERE Total > 5;
 <summary> <code> #5 </code> </summary>
 
 ```sql
-SELECT COUNT(*) FROM Invoice WHERE Total < 5;
+SELECT COUNT(*) FROM invoice WHERE total < 5;
 ```
 
 </details>
@@ -471,7 +471,7 @@ SELECT COUNT(*) FROM Invoice WHERE Total < 5;
 <summary> <code> #6 </code> </summary>
 
 ```sql
-SELECT Count(*) FROM Invoice WHERE BillingState in ('CA', 'TX', 'AZ');
+SELECT COUNT(*) FROM invoice WHERE billing_state in ('CA', 'TX', 'AZ');
 ```
 
 </details>
@@ -481,7 +481,7 @@ SELECT Count(*) FROM Invoice WHERE BillingState in ('CA', 'TX', 'AZ');
 <summary> <code> #7 </code> </summary>
 
 ```sql
-SELECT AVG(Total) FROM Invoice;
+SELECT AVG(total) FROM invoice;
 ```
 
 </details>
@@ -491,7 +491,7 @@ SELECT AVG(Total) FROM Invoice;
 <summary> <code> #8 </code> </summary>
 
 ```sql
-SELECT SUM(Total) FROM Invoice;
+SELECT SUM(total) FROM invoice;
 ```
 
 </details>
