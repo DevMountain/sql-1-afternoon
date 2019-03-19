@@ -10,7 +10,7 @@ Any new tables or records that we add into the database will be removed after yo
 
 Use [www.sqlteaching.com](http://www.sqlteaching.com/) or [sqlbolt.com](http://sqlbolt.com/) as resources for the missing keywords you'll need.
 
-## Table - People
+## Table - person
 
 ### Instructions
 1. Create a table called person that records a person's id, name, age, height ( in cm ), city, favorite_color. 
