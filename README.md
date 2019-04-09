@@ -2,13 +2,11 @@
 
 # Project Summary
 
-In this project we will be practicing inserting and querying data using SQL. We'll make use of a handy online tool provided by DevMountain that will allow us to write SQL online. <a href="https://postgres.devmountain.com/">Click me</a>
+In this project we will be practicing inserting and querying data using SQL. We'll make use of a handy online tool provided by DevMountain that will allow us to write SQL in your browser. [Click Me](https://postgres.devmountain.com/)
 
 On the left are the Tables with their fields, the right is where we will be writing our queries, and the bottom is where we will see our results.  
 
 Any new tables or records that we add into the database will be removed after you refresh the page.
-
-Use [www.sqlteaching.com](http://www.sqlteaching.com/) or [sqlbolt.com](http://sqlbolt.com/) as resources for the missing keywords you'll need.
 
 ## Table - person
 
@@ -495,6 +493,18 @@ SELECT SUM(total) FROM invoice;
 ```
 
 </details>
+
+</details>
+
+
+## Resources
+
+<details>
+
+<summary> <code> SQL </code> </summary>
+
+* [SQL Teaching](http://www.sqlteaching.com/)
+* [SQL Bolt](http://sqlbolt.com/)
 
 </details>
 
