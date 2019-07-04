@@ -39,7 +39,7 @@ Any new tables or records that we add into the database will be removed after yo
 <summary> <code> #1 </code> </summary>
 
 ```sql
-CREATE TABLE person ( person_id SERIAL, name VARCHAR(200), age INTEGER, height INTEGER, city VARCHAR(200), favorite_color VARCHAR(200) );
+CREATE TABLE person ( person_id SERIAL PRIMARY KEY, name VARCHAR(200), age INTEGER, height INTEGER, city VARCHAR(200), favorite_color VARCHAR(200) );
 ```
 
 </details>
