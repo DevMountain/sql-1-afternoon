@@ -180,7 +180,7 @@ SELECT * FROM person WHERE favorite_color IN ( 'yellow', 'purple' )
 
 ### Instructions
 
-1. Create a table called orders that records: person_id, product_name, product_price, quantity.
+1. Create a table called orders that records: order_id, person_id, product_name, product_price, quantity.
 2. Add 5 orders to the orders table.
     * Make orders for at least two different people.
     * person_id should be different for different people.
@@ -200,7 +200,7 @@ SELECT * FROM person WHERE favorite_color IN ( 'yellow', 'purple' )
 <summary> <code> #1 </code> </summary>
 
 ```sql
-CREATE TABLE orders ( person_id SERIAL, product_name VARCHAR(200), product_price NUMERIC, quantity INTEGER );
+CREATE TABLE orders ( order_id SERIAL PRIMARY KEY, person_id INTEGER, product_name VARCHAR(200), product_price NUMERIC, quantity INTEGER );
 ```
 
 </details>
